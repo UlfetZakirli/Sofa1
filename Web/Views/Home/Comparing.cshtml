@@ -1,0 +1,202 @@
+﻿
+@{
+    ViewData["Title"] = "Comparing";
+}
+
+<!-- breadcrumb -->
+<div class="container header-mt">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb custom-breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Compare</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb -->
+<!-- main content -->
+<div class="main-content pb-80">
+    <div class="container res-table" id="responsivetbl">
+        <ul class="btn-list">
+            <li class="btn-list__item">
+                <button><span class="thead-title">product 01</span></button>
+            </li>
+            <li class="btn-list__item active">
+                <button><span class="thead-title">product 02</span></button>
+            </li>
+            <li class="btn-list__item">
+                <button><span class="thead-title">product 03</span></button>
+            </li>
+        </ul>
+        <div class="mobile-placeholder" id="mobileimgplaceholder">
+            <h2></h2>
+            <div></div>
+        </div>
+        <table class="compare-table">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="compare-table__item wishlist-tab">
+                    <div class="card-item card-item--light">
+                        <div class="card-item__bg">
+                            <a href="#">
+                                <img src="/images/product-01.jpg" alt="">
+                            </a>
+                            <a href="#" class="delete-from-list"><i class="icon-bin"></i></a>
+                            <!--                                            <span class="badge card-item__bg&#45;&#45;badge">New Arrival</span>-->
+                        </div>
+                        <div class="card-item__body">
+                            <div class="card-item__body--price">
+                                <strong>$299.00</strong>
+                            </div>
+                            <div class="card-item__body--title">
+                                <a href="#"><h4>Modern fabric armchair</h4></a>
+                            </div>
+                            <div class="product-rate">
+                                <div class="product-rate__star">
+                                    <span class="rate-3"></span>
+                                </div>
+                                <div class="rate-number">
+                                    (3)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item__overlay">
+                            <ul class="action-btn">
+                                <li><a href="#" class="icon-box"><i class="icon-search"></i></a></li>
+                                <li class="wishlist-btn"><span class="icon-box"><i
+                                        class="wishlist__icon icon-heart"></i></span></li>
+                            </ul>
+                            <a href="#" class="btn">Add to cart</a>
+                        </div>
+                    </div>
+                </th>
+                <th class="compare-table__item wishlist-tab">
+                    <div class="card-item card-item--light">
+                        <div class="card-item__bg">
+                            <a href="#">
+                                <img src="/images/product-02.jpg" alt="">
+                            </a>
+                            <a href="#" class="delete-from-list"><i class="icon-bin"></i></a>
+                            <span class="badge card-item__bg--badge">50% Sale</span>
+                        </div>
+                        <div class="card-item__body">
+                            <div class="card-item__body--price">
+                                <strong>$299.00</strong>
+                            </div>
+                            <div class="card-item__body--title">
+                                <a href="#"><h4>Modern fabric armchair</h4></a>
+                            </div>
+                            <div class="product-rate">
+                                <div class="product-rate__star">
+                                    <span class="rate-3"></span>
+                                </div>
+                                <div class="rate-number">
+                                    (3)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item__overlay">
+                            <ul class="action-btn">
+                                <li><a href="#" class="icon-box"><i class="icon-search"></i></a></li>
+                                <li class="wishlist-btn"><span class="icon-box"><i
+                                        class="wishlist__icon icon-heart"></i></span></li>
+                            </ul>
+                            <a href="#" class="btn">Add to cart</a>
+                        </div>
+                    </div>
+                </th>
+                <th class="compare-table__item wishlist-tab">
+                    <div class="card-item card-item--light">
+                        <div class="card-item__bg">
+                            <a href="#">
+                                <img src="/images/product-08.jpg" alt="">
+                            </a>
+                            <a href="#" class="delete-from-list"><i class="icon-bin"></i></a>
+                            <!--                                            <span class="badge card-item__bg&#45;&#45;badge">New Arrival</span>-->
+                        </div>
+                        <div class="card-item__body">
+                            <div class="card-item__body--price">
+                                <strong>$299.00</strong>
+                            </div>
+                            <div class="card-item__body--title">
+                                <a href="#"><h4>Modern fabric armchair</h4></a>
+                            </div>
+                            <div class="product-rate">
+                                <div class="product-rate__star">
+                                    <span class="rate-3"></span>
+                                </div>
+                                <div class="rate-number">
+                                    (3)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item__overlay">
+                            <ul class="action-btn">
+                                <li><a href="#" class="icon-box"><i class="icon-search"></i></a></li>
+                                <li class="wishlist-btn"><span class="icon-box"><i
+                                        class="wishlist__icon icon-heart"></i></span></li>
+                            </ul>
+                            <a href="#" class="btn">Add to cart</a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Width</td>
+                <td>18 ½ "</td>
+                <td class="default">21 ½ "</td>
+                <td>34 "</td>
+            </tr>
+            <tr>
+                <td>Depth</td>
+                <td>37 ¼ "</td>
+                <td class="default">32 ½ "</td>
+                <td>30 ½ "</td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>20 ½ "</td>
+                <td class="default">16 ¾ "</td>
+                <td>17"</td>
+            </tr>
+            <tr>
+                <td>Main material</td>
+                <td>Solid wood</td>
+                <td class="not-available default"><i class="far fa-times-circle"></i></td>
+                <td>Solid wood</td>
+            </tr>
+            <tr>
+                <td>Seat material</td>
+                <td>Solid wood</td>
+                <td class="default">Metal & Cotton</td>
+                <td>Fiberboard</td>
+            </tr>
+            <tr>
+                <td>Foot material</td>
+                <td>Solid wood</td>
+                <td class="default">Polypropylene</td>
+                <td>Solid wood</td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>Solid pine</td>
+                <td class="default">Gray</td>
+                <td>Black</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>8.90 kg</td>
+                <td class="default">9.90 kg</td>
+                <td>7.70 kg</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- end main content -->

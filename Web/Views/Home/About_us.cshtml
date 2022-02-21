@@ -1,0 +1,177 @@
+﻿@{
+    ViewData["Title"] = "About us";
+}
+<!-- breadcrumb -->
+<div class="container header-mt">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb custom-breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" >Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb -->
+<!-- main content -->
+<div class="main-content pb-80">
+    <div class="container">
+        <!-- about wrapper -->
+        <div class="about-area mb-100">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="/images/minimal-white-chair.jpg" alt="" class="w-100">
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-area__content">
+                        <h1>About us</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius excepturi incidunt laudantium
+                            nesciunt
+                            quidem ratione sunt tempore voluptates? Doloribus expedita harum illum nulla obcaecati omnis
+                            ratione, sint unde? Cumque, officiis?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius excepturi incidunt laudantium
+                            nesciunt
+                            quidem ratione sunt tempore voluptates? Doloribus expedita harum illum nulla obcaecati omnis
+                            ratione, sint unde? Cumque, officiis?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam architecto at doloribus
+                            enim
+                            voluptatem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end about wrapper -->
+        <!-- light text boxes -->
+        <div class="mb-100">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <div class="text-box">
+                        <div class="text-box__num">01</div>
+                        <div class="text-box__inner">
+                            <h5 class="text-box__inner--title">Delivery services</h5>
+
+                            <p>No matter the size or number of items in your order, you can get it all
+                                delivered.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="text-box">
+                        <div class="text-box__num">02</div>
+                        <div class="text-box__inner">
+                            <h5 class="text-box__inner--title">It's OK to change your mind!</h5>
+                            <p>If you’re not totally satisfied with your purchase you can return it within 90
+                                days.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="text-box">
+                        <div class="text-box__num">03</div>
+                        <div class="text-box__inner">
+                            <h5 class="text-box__inner--title">We are always here!</h5>
+                            <p>24 hours support service, we are always there for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end light text boxes -->
+        <!-- about video -->
+        <div class="row mb-100">
+            <div class="col-12">
+                <div class="video-wrapper">
+                    <video id="myVideo1" data-vid="myVideo1" poster="/images/video-thumb.jpg">
+                        <source src="example.html" type="video/mp4">
+                    </video>
+                    <button class="play-btn" id="myBtn1" data-vid="myVideo1"><i class="fas fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- end about video -->
+        <!-- meet our team -->
+        <div class="mb-100">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="main-title">
+                        Meet our team
+                    </h2>
+                    <div class="owl-carousel" id="teamCarousel">
+                        <div class="ld-tm pos-rel team-card">
+                            <div class="team-card__img">
+                                <img src="/images/team/team-01.jpg" alt="">
+                            </div>
+                            <div class="team-card__inner team-card__overlay">
+                                <h3 class="ld-tm-name team-name">Mark Grey</h3>
+                                <h6 class="ld-tm-pos text-uppercase team-pos">Senior Designer</h6>
+                            </div>
+                        </div>
+                        <div class="ld-tm pos-rel team-card">
+                            <div class="team-card__img">
+                                <img src="/images/team/team-02.jpg" alt="">
+                            </div>
+                            <div class="team-card__inner team-card__overlay">
+                                <h3 class="ld-tm-name team-name">Mark Grey</h3>
+                                <h6 class="ld-tm-pos text-uppercase team-pos">Senior Designer</h6>
+                            </div>
+                        </div>
+                        <div class="ld-tm pos-rel team-card">
+                            <div class="team-card__img">
+                                <img src="/images/team/team-03.jpg" alt="">
+                            </div>
+                            <div class="team-card__inner team-card__overlay">
+                                <h3 class="ld-tm-name team-name">Mark Grey</h3>
+                                <h6 class="ld-tm-pos text-uppercase team-pos">Senior Designer</h6>
+                            </div>
+                        </div>
+                        <div class="ld-tm pos-rel team-card">
+                            <div class="team-card__img">
+                                <img src="/images/team/team-04.jpg" alt="">
+                            </div>
+                            <div class="team-card__inner team-card__overlay">
+                                <h3 class="ld-tm-name team-name">Mark Grey</h3>
+                                <h6 class="ld-tm-pos text-uppercase team-pos">Senior Designer</h6>
+                            </div>
+                        </div>
+                        <div class="ld-tm pos-rel team-card">
+                            <div class="team-card__img">
+                                <img src="/images/team/team-02.jpg" alt="">
+                            </div>
+                            <div class="team-card__inner team-card__overlay">
+                                <h3 class="ld-tm-name team-name">Mark Grey</h3>
+                                <h6 class="ld-tm-pos text-uppercase team-pos">Senior Designer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end meet our team -->
+        <!-- client slider -->
+        <div class="client-slider">
+            <div class="owl-carousel ltr" id="brandSlider">
+                <div class="item">
+                    <img src="/images/brand01.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="/images/brand02.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="/images/brand04.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="/images/brand03.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="/images/brand05.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- end client slider -->
+    </div>
+</div>
+<!-- end main content -->

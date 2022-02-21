@@ -1,0 +1,308 @@
+﻿
+@{
+    ViewData["Title"] = "Blog Page";
+}
+<!-- breadcrumb -->
+<div class="container header-mt">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb custom-breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index" >Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog list 01</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb -->
+<!-- main content -->
+<div class="main-content pb-80">
+    <div class="container">
+        <div class="row">
+            <!-- sidebar -->
+            <div class="col-lg-3 col-md-4 sidebar">
+                <!-- popular blog posts -->
+                <div class="sidebar__item">
+                    <h3 class="sidebar__item--title">
+                        Popular posts
+                    </h3>
+                    <ul class="media-list">
+                        <li class="media-list__item">
+                            <div class="media">
+                                <a class="media-list__item--img" href="single-blog-post.html">
+                                    <img src="/images/media01.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <a href="single-blog-post.html">
+                                        <h5 class="media-list__item--title">4 easy ways to have a modern house</h5>
+                                    </a>
+                                    <div class="media-list__item--details">
+                                        <span>December 18, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="media-list__item">
+                            <div class="media">
+                                <a class="media-list__item--img" href="single-blog-post.html">
+                                    <img src="/images/media02.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <a href="single-blog-post.html">
+                                        <h5 class="media-list__item--title">How to design your home for holidays?</h5>
+                                    </a>
+                                    <div class="media-list__item--details">
+                                        <span>December 18, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="media-list__item">
+                            <div class="media">
+                                <a class="media-list__item--img" href="single-blog-post.html">
+                                    <img src="/images/media03.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <a href="single-blog-post.html">
+                                        <h5 class="media-list__item--title">Minimal design quick tips</h5>
+                                    </a>
+                                    <div class="media-list__item--details">
+                                        <span>December 18, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- blog post categories -->
+                <div class="sidebar__item">
+                    <h3 class="sidebar__item--title">
+                        Categories
+                    </h3>
+                    <ul class="categories-list">
+                        <li class="categories-list__item">
+                            <a href="#">All
+                                <span class="badge category-badge">56</span>
+                            </a>
+                        </li>
+                        <li class="categories-list__item">
+                            <a href="#">Sofas and armchairs
+                                <span class="badge category-badge">12</span>
+                            </a>
+                        </li>
+                        <li class="categories-list__item">
+                            <a href="#">Tables
+                                <span class="badge category-badge">15</span>
+                            </a>
+                        </li>
+                        <li class="categories-list__item">
+                            <a href="#">Chairs
+                                <span class="badge category-badge">32</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end blog post categories -->
+                <!-- latest products -->
+                <div class="sidebar__item">
+                    <h3 class="sidebar__item--title">
+                        Latest products
+                    </h3>
+                    <ul>
+                        <li class="product-media">
+                            <div class="media">
+                                <a class="product-media__img" href="#">
+                                    <img src="/images/product-media-01.jpg" alt="">
+                                </a>
+                                <div class="media-body product-media__body">
+                                    <div class="title">
+                                        <a href="#">Modern lighting</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>$130.00</span>
+                                        <span class="old">$230.00</span>
+                                    </div>
+                                    <div class="rating">
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-4"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (4)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-media">
+                            <div class="media">
+                                <a class="product-media__img" href="#">
+                                    <img src="/images/product-media-02.jpg" alt="">
+                                </a>
+                                <div class="media-body product-media__body">
+                                    <div class="title">
+                                        <a href="#">Fabric armchair</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>$200.00</span>
+                                        <span class="old">$350.00</span>
+                                    </div>
+                                    <div class="rating">
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-4"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (4)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-media">
+                            <div class="media">
+                                <a class="product-media__img" href="#">
+                                    <img src="/images/product-media-03.jpg" alt="">
+                                </a>
+                                <div class="media-body product-media__body">
+                                    <div class="title">
+                                        <a href="#">Gray sleeper Sofa</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>$330.00</span>
+                                        <span class="old">$630.00</span>
+                                    </div>
+                                    <div class="rating">
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-4"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (4)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of latest products -->
+            </div>
+            <!-- end sidebar -->
+            <!-- blog posts -->
+            <div class="col-lg-9 col-md-8">
+                <div class="row">
+                    <!-- blog posts -->
+                    <div class="col-12">
+                        <div class="blog-post blog-post--br">
+                            <div class="content blog-post__img">
+                                <a href="#">
+                                    <img src="/images/blog-post-01.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-post__inner">
+                                <div class="blog-post__inner--title">
+                                    <a href="#"><h4>How to build your great lighting?</h4></a>
+                                </div>
+                                <div class="blog-post__inner--details">
+                                    <span class="author">By Adam Smith,</span>
+                                    <span class="date">December 18, 2019</span>
+                                </div>
+                                <div class="blog-post__inner--content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                                        alias
+                                        assumenda blanditiis
+                                        consectetur culpa esse eveniet, ex exercitationem ipsam minima minus molestias
+                                        mollitia
+                                        nostrum qui, ratione, repudiandae suscipit temporibus tenetur?</p>
+                                </div>
+                                <div class="blog-post__inner--btn">
+                                    <a href="#" class="btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="blog-post blog-post--br">
+                            <div class="content blog-post__img">
+                                <a href="#">
+                                    <img src="/images/blog-post-02.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-post__inner">
+                                <div class="blog-post__inner--title">
+                                    <a href="#"><h4>Minimalist in a small and stylish bedroom</h4></a>
+                                </div>
+                                <div class="blog-post__inner--details">
+                                    <span class="author">By Adam Smith,</span>
+                                    <span class="date">December 18, 2019</span>
+                                </div>
+                                <div class="blog-post__inner--content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                                        alias
+                                        assumenda blanditiis
+                                        consectetur culpa esse eveniet, ex exercitationem ipsam minima minus molestias
+                                        mollitia
+                                        nostrum qui, ratione, repudiandae suscipit temporibus tenetur?</p>
+                                </div>
+                                <div class="blog-post__inner--btn">
+                                    <a href="#" class="btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="blog-post blog-post--br">
+                            <div class="content blog-post__img">
+                                <a href="#">
+                                    <img src="/images/blog-post-03.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-post__inner">
+                                <div class="blog-post__inner--title">
+                                    <a href="#"><h4>8 new way to design your wall</h4></a>
+                                </div>
+                                <div class="blog-post__inner--details">
+                                    <span class="author">By Adam Smith,</span>
+                                    <span class="date">December 18, 2019</span>
+                                </div>
+                                <div class="blog-post__inner--content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                                        alias
+                                        assumenda blanditiis
+                                        consectetur culpa esse eveniet, ex exercitationem ipsam minima minus molestias
+                                        mollitia
+                                        nostrum qui, ratione, repudiandae suscipit temporibus tenetur?</p>
+                                </div>
+                                <div class="blog-post__inner--btn">
+                                    <a href="#" class="btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pagination -->
+                    <div class="col-12">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination custom-pagination">
+                                <!-- <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>-->
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- end pagination -->
+                </div>
+            </div>
+            <!-- end blog posts -->
+        </div>
+    </div>
+</div>
+<!-- end main content -->

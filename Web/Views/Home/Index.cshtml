@@ -1,0 +1,439 @@
+﻿@{
+    ViewData["Title"] = "it is created by Ulfat";
+}
+@model HomeVM;
+
+
+<!-- hero header minimal -->
+<div class="container">
+    <div class="hero-header hero-header--bg hero-header-pad">
+        <div class="row">
+            <div class="col-md-5 hero-header__content">
+                <h1 class="hero-header-title">Modern Home design</h1>
+                <p class="hero-header-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur
+                    deleniti fugiat itaque
+                    laudantium nemo nesciunt, non nostrum optio sequi, similique sit sunt suscipit vero!</p>
+                <a href="shop-sidebar-right.html" class="btn  hero-header-btn">Show more</a>
+            </div>
+            <div class="col-md-7 hero-header__img">
+                <img src="/images/header/header-06.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end hero header minimal -->
+<!-- main content -->
+<div class="main-content py-100">
+    <div class="container">
+        <!-- items slider light blue -->
+        <div class="mb-100">
+            <div class="row">
+
+                <div class="col-12">
+                    <h2 class="main-title">This Week Top Sellers</h2>
+                </div>
+            </div>
+            <div class="owl-carousel card-item-slider ltr" id="itemSliderBlue">
+                <div class="item">
+                    <div class="card-item card-item--blue">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="images/product-14.jpg" class="card-item__img" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-item__body">
+                                    <div class="card-item__body--title">
+                                        <a href="#"><h3>Gray Dining chair</h3></a>
+                                    </div>
+                                    <div class="card-item__body--price">
+                                        <strong>$150,00</strong>
+                                        <span class="old">$250.00</span>
+                                    </div>
+                                    <div class="card-item__body--rate">
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-3"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (3)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item__body--btn">
+                                        <a href="javascript:void(0)" @*pro-id="@productNew.ID"*@  class="btn btn-shop">Shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-item card-item--blue">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="images/product-15.jpg" class="card-item__img" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-item__body">
+                                    <div class="card-item__body--title">
+                                        <a href="#"><h3>Gray Dining chair</h3></a>
+                                    </div>
+                                    <div class="card-item__body--price">
+                                        <strong>$150,00</strong>
+                                        <span class="old">$250.00</span>
+                                    </div>
+                                    <div class="card-item__body--rate">
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-3"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (3)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item__body--btn">
+                                        <a href="#" class="btn btn-shop">Shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-item card-item--blue">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="images/product-16.jpg" class="card-item__img" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-item__body">
+                                    <div class="card-item__body--title">
+                                        <a href="#"><h3>Gray Dining chair</h3></a>
+                                    </div>
+                                    <div class="card-item__body--price">
+                                        <strong>$150,00</strong>
+                                        <span class="old">$250.00</span>
+                                    </div>
+                                    <div class="card-item__body--rate">
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-3"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (3)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item__body--btn">
+                                        <a href="#" class="btn btn-shop">Shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end items slider light blue -->
+        <!-- shop categories -->
+        <div class="row mb-100">
+            <div class="col-12">
+                <h2 class="main-title">Popular Categories</h2>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="fancy-box">
+                    <div class="fancy-box__img">
+                        <img src="images/category-01.jpg" alt="">
+                    </div>
+                    <div class="fancy-box__inner">
+                        <a href="#"><h5 class="title">Kitchen</h5></a>
+                        <a href="#" class="link">
+                            <span><i class="fa fa-angle-right"></i> </span>
+                            View more
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="fancy-box">
+                    <div class="fancy-box__img">
+                        <img src="images/category-02.jpg" alt="">
+                    </div>
+                    <div class="fancy-box__inner">
+                        <a href="#">
+                            <h5 class="title">Living room</h5>
+                        </a>
+                        <a href="#" class="link"><span><i class="fa fa-angle-right"></i> </span>View more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="fancy-box">
+                    <div class="fancy-box__img">
+                        <img src="images/category-03.jpg" alt="">
+                    </div>
+                    <div class="fancy-box__inner">
+                        <a href="#">
+                            <h5 class="title">Bedroom</h5>
+                        </a>
+                        <a href="#" class="link"><span><i class="fa fa-angle-right"></i> </span>View more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="fancy-box">
+                    <div class="fancy-box__img">
+                        <img src="images/category-04.jpg" alt="">
+                    </div>
+                    <div class="fancy-box__inner">
+                        <a href="#">
+                            <h5 class="title">Office</h5>
+                        </a>
+                        <a href="#" class="link"><span><i class="fa fa-angle-right"></i> </span>View more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end shop categories -->
+        <!-- gallery -->
+        <div class="mb-100">
+            <div class="row">
+                <!-- our services tabs -->
+                <div class="col-lg-4">
+                    <div class="nav flex-column nav-pills vertical-tab" id="v-pills-tab" role="tablist"
+                         aria-orientation="vertical">
+                        <h4 class="title">
+                            Get a little inspiration!
+                        </h4>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dignissimos
+                            exercitationem quos repellat ullam voluptate.</p>
+                        <a class="nav-link vertical-tab__link show active" id="v-pills-tab-1"
+                           data-toggle="pill"
+                           href="#v-pills-1"
+                           role="tab" aria-controls="v-pills-tab-1" aria-selected="true">Living sustainably</a>
+                        <a class="nav-link vertical-tab__link" id="v-pills-tab-2"
+                           data-toggle="pill"
+                           href="#v-pills-2"
+                           role="tab"
+                           aria-controls="v-pills-2" aria-selected="false">Happy kids</a>
+                        <a class="nav-link vertical-tab__link" id="v-pills-tab-3"
+                           data-toggle="pill"
+                           href="#v-pills-3"
+                           role="tab"
+                           aria-controls="v-pills-3" aria-selected="false">Find your sweet spot</a>
+                    </div>
+                </div>
+                <!-- our services tabs content -->
+                <div class="col-lg-8">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
+                             aria-labelledby="v-pills-tab-1">
+                            <div class="row vertical-tab__content">
+                                <div class="col-12">
+                                    <img src="images/thumb-01.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
+                             aria-labelledby="v-pills-tab-2">
+                            <div class="row vertical-tab__content">
+                                <div class="col-12">
+                                    <img src="images/thumb-02.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane vertical-tab__content fade" id="v-pills-3" role="tabpanel"
+                             aria-labelledby="v-pills-tab-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="images/thumb-03.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end gallery -->
+        <!-- testimonials -->
+        <div class="mb-100">
+            <div class="testimonial testimonial--shadow">
+                <div class="container">
+                    <!-- testimonials carousel -->
+                    <div class="owl-carousel ltr" id="testimonial">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-wrapper__img">
+                                <img src="images/profile-01.jpg" alt="">
+                            </div>
+                            <div class="carousel-wrapper__content">
+                                <div class="text">
+                                    <p>“ Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                        lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.
+                                        ”</p>
+                                </div>
+                                <div class="username">
+                                    -John Smith
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-wrapper">
+                            <div class="carousel-wrapper__img">
+                                <img src="images/profile-02.jpg" alt="">
+                            </div>
+                            <div class="carousel-wrapper__content">
+                                <div class="text">
+                                    <p>“ Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                        lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.
+                                        ”</p>
+                                </div>
+                                <div class="username">
+                                    -John Smith
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item carousel-wrapper">
+                            <div class="carousel-wrapper__img">
+                                <img src="images/profile-03.jpg" alt="">
+                            </div>
+                            <div class="carousel-wrapper__content">
+                                <div class="text">
+                                    <p>“ Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                        lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.
+                                        ”</p>
+                                </div>
+                                <div class="username">
+                                    -John Smith
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end testimonials carousel -->
+                </div>
+            </div>
+        </div>
+        <!-- end of testimonials -->
+        <!--  banner call to action  -->
+        <div class="mb-100">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner style2">
+                        <div class="banner__col">
+                            <div class="banner-img">
+                                <img src="images/banners/banner-bg-03.jpg" alt="">
+                            </div>
+                            <div class="banner-inner banner-inner--center">
+                                <a href="#">
+                                    <h4 class="title">Creative Design</h4>
+                                    <span class="sub-title">up to 70% Sale</span>
+                                </a>
+                                <a href="#" class="btn banner-btn">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner style2">
+                        <div class="banner__col">
+                            <div class="banner-img">
+                                <img src="images/banners/banner-bg-04.jpg" alt="">
+                            </div>
+                            <div class="banner-inner banner-inner--center">
+                                <a href="#">
+                                    <h4 class="title">Creative home decor</h4>
+                                    <span class="sub-title">2020 collection</span>
+                                </a>
+                                <a href="#" class="btn banner-btn">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  end of banner call to action  -->
+        <!-- blog post -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="main-title">The Latest Blog posts</h2>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-post blog-post--grid blog-post--mb">
+                    <div class="blog-post__img">
+                        <div class="blog-post__img--overlay"></div>
+                        <img src="images/blog1.jpg" alt="">
+                        <a href="#" class="btn blog-post__btn">
+                            Read more
+                        </a>
+                    </div>
+                    <div class="blog-post__inner">
+                        <div class="blog-post__inner--title">
+                            <a href="#"><h4>3 great ways to design your bedroom</h4></a>
+                        </div>
+                        <div class="blog-post__inner--details">
+                            <span class="author">By Adam Smith,</span>
+                            <span class="date">December 18, 2019</span>
+                        </div>
+                        <div class="blog-post__inner--des">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error maiores nemo obcaecati
+                                provident qui, quos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-post blog-post--grid blog-post--mb">
+                    <div class="blog-post__img">
+                        <div class="blog-post__img--overlay"></div>
+                        <img src="images/blog2.jpg" alt="">
+                        <a href="#" class="btn blog-post__btn">
+                            Read more
+                        </a>
+                    </div>
+                    <div class="blog-post__inner">
+                        <div class="blog-post__inner--title">
+                            <a href="#"><h4>How to design a happy home</h4></a>
+                        </div>
+                        <div class="blog-post__inner--details">
+                            <span class="author">By Adam Smith,</span>
+                            <span class="date">December 18, 2019</span>
+                        </div>
+                        <div class="blog-post__inner--des">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error maiores nemo obcaecati
+                                provident qui, quos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mx-auto">
+                <div class="blog-post blog-post--grid blog-post--mb">
+                    <div class="blog-post__img">
+                        <div class="blog-post__img--overlay"></div>
+                        <img src="images/blog3.jpg" alt="">
+                        <a href="#" class="btn blog-post__btn">
+                            Read more
+                        </a>
+                    </div>
+                    <div class="blog-post__inner">
+                        <div class="blog-post__inner--title">
+                            <a href="#"><h4>Top tips for sustainable living</h4></a>
+                        </div>
+                        <div class="blog-post__inner--details">
+                            <span class="author">By Adam Smith,</span>
+                            <span class="date">December 18, 2019</span>
+                        </div>
+                        <div class="blog-post__inner--des">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error maiores nemo obcaecati
+                                provident qui, quos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of blog post -->
+    </div>
+</div>
+<!-- end of main content -->

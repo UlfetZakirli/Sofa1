@@ -1,0 +1,566 @@
+﻿
+@{
+    ViewData["Title"] = "My_Account";
+}
+<!-- breadcrumb -->
+<div class="container header-mt">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb custom-breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">My account</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb -->
+<!-- main content -->
+<div class="main-content pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="nav flex-column nav-pills account-pills account-tabs" id="v-pills-tab" role="tablist"
+                     aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                       role="tab" aria-controls="v-pills-profile" aria-selected="true"><span><i
+                            class="icon-user-profile"></i></span>Profile</a>
+                    <a class="nav-link" id="v-pills-order-tab" data-toggle="pill" href="#v-pills-order" role="tab"
+                       aria-controls="v-pills-order" aria-selected="false"><span><i
+                            class="icon-shopping-basket"></i></span>Orders</a>
+                    <a class="nav-link" id="v-pills-address-tab" data-toggle="pill" href="#v-pills-address" role="tab"
+                       aria-controls="v-pills-address" aria-selected="false"><span><i class="icon-sign"></i></span>Addresses</a>
+                    <a class="nav-link" id="v-pills-wishlist-tab" data-toggle="pill" href="#v-pills-wishlist" role="tab"
+                       aria-controls="v-pills-wishlist" aria-selected="false"><span><i
+                            class="icon-wish-list"></i></span>Wishlist</a>
+                    <a class="nav-link" href="#" role="tab" aria-selected="false"><span><i
+                            class="icon-log-out"></i></span>Log
+                        out</a>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="tab-content account-content" id="v-pills-tabContent">
+                    <!-- profile tab -->
+                    <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
+                         aria-labelledby="v-pills-profile-tab">
+                        <!-- profile information -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="profile-info profile-info--main">
+                                    <div class="profile-info__row">
+                                        <div class="profile-info__col"><span class="content"><span>Full name:</span>
+                                           <span>John Doe</span>
+                                        </span></div>
+                                        <div class="profile-info__col"><span class="content"><span>Email Address:</span><span
+                                                class="profile-info__col--value ltr">Sample@sample.com</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="profile-info__row">
+                                        <div class="profile-info__col"><span class="content"><span>Phone:</span>
+                                            <span class="profile-info__col--value">917-353-7335</span>
+                                        </span></div>
+                                        <div class="profile-info__col"><span class="content"><span>Username:</span>
+                                            <span>John Doe</span>
+                                        </span></div>
+                                    </div>
+                                    <div class="profile-info__action">
+                                        <button type="button" data-toggle="modal" data-target="#editProfileModal"
+                                                class="btn"><span><i class="icon-edit"></i></span>Edit your profile
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end profile information -->
+                        <!-- change the password form -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="custom-form mt-30">
+                                    <form class="change-pass">
+                                        <h4 class="custom-form__title">Change your password</h4>
+                                        <div class="form-group custom-form__input">
+                                            <label for="oldPassInput">Old Password</label>
+                                            <div class="input-box password-box">
+                                                <input type="password" class="form-control ltr" id="oldPassInput"
+                                                       placeholder="">
+                                                <div class="input-box__icon">
+                                            <span class="showhidepassword"><i
+                                                    class="far fa-eye-slash"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group custom-form__input">
+                                            <label for="newPassInput">New Password</label>
+                                            <div class="input-box password-box">
+                                                <input type="password" class="form-control ltr" id="newPassInput"
+                                                       placeholder="">
+                                                <div class="input-box__icon">
+                                            <span class="showhidepassword"><i
+                                                    class="far fa-eye-slash"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group custom-form__input">
+                                            <label for="retypePassInput">Confirm new Password</label>
+                                            <div class="input-box password-box">
+                                                <input type="password" class="form-control ltr" id="retypePassInput"
+                                                       placeholder="">
+                                                <div class="input-box__icon">
+                                            <span class="showhidepassword"><i
+                                                    class="far fa-eye-slash"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-form__btn">
+                                            <button type="submit" class="btn change-pass-btn">Change your
+                                                password
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal edit profile -->
+                        <div class="modal fade profile-info__modal" id="editProfileModal" tabindex="-1" role="dialog"
+                             aria-labelledby="editProfileModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editProfileModalTitle">Edit your Information</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="custom-form">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group custom-form__input">
+                                                        <label for="firstName">First Name</label>
+                                                        <input type="text" class="form-control" id="firstName"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group custom-form__input">
+                                                        <label for="lastName">Last Name</label>
+                                                        <input type="text" class="form-control" id="lastName"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group custom-form__input">
+                                                        <label for="email">Email Address</label>
+                                                        <input type="email" class="form-control ltr" id="email"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group custom-form__input">
+                                                        <label for="userName">Username</label>
+                                                        <input type="text" class="form-control" id="userName"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer custom-form__btn">
+                                        <button type="button" class="btn btn-close" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="button" class="btn btn-green">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Modal edit profile -->
+                    </div>
+                    <!-- orders tab -->
+                    <div class="tab-pane fade" id="v-pills-order" role="tabpanel" aria-labelledby="v-pills-order-tab">
+                        <div class="order-table order-table__collapse">
+                            <div class="order-table__head">
+                                <div class="order-table__row order-table__row--head">
+                                    <div class="order-table__cell order-table__cell--hash">#</div>
+                                    <div class="order-table__cell order-table__cell--id">Order Number</div>
+                                    <div class="order-table__cell order-table__cell--date">Order Date</div>
+                                    <div class="order-table__cell order-table__cell--receive">Deliver date</div>
+                                    <div class="order-table__cell order-table__cell--price">Total price</div>
+                                    <div class="order-table__cell order-table__cell--payment">Payment</div>
+                                    <div class="order-table__cell order-table__cell--details">Details</div>
+                                </div>
+                            </div>
+                            <div class="order-table__body">
+                                <div class="order-table__row">
+                                    <div class="order-table__cell order-table__cell--hash">1</div>
+                                    <div class="order-table__cell order-table__cell--id">
+                                        <div class="order-table__cell--heading">Order number</div>
+                                        <div class="order-table__cell--content id-content">
+                                            123456789
+                                        </div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--date">
+                                        <div class="order-table__cell--heading">Order Date</div>
+                                        <div class="order-table__cell--content date-content">22/06/2019</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--receive">
+                                        <div class="order-table__cell--heading">Deliver State</div>
+                                        <div class="order-table__cell--content receive-content">
+                                            <span class="badge order-table__status order-table__status--progress">In progress</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--price">
+                                        <div class="order-table__cell--heading">Total price</div>
+                                        <div class="order-table__cell--content  price-content">$1,500</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--payment">
+                                        <div class="order-table__cell--heading">Payment</div>
+                                        <div class="order-table__cell--content  payment-content">Master card</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--details">
+                                        <div class="order-table__cell--heading">Details</div>
+                                        <div class="order-table__cell--content  details-content"><a
+                                                href="order-details.html#v-pills-order-tab">View
+                                            more</a></div>
+                                    </div>
+                                </div>
+                                <div class="order-table__row">
+                                    <div class="order-table__cell order-table__cell--hash">2</div>
+                                    <div class="order-table__cell order-table__cell--id">
+                                        <div class="order-table__cell--heading">Order number</div>
+                                        <div class="order-table__cell--content id-content">
+                                            123456789
+                                        </div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--date">
+                                        <div class="order-table__cell--heading">Order Date</div>
+                                        <div class="order-table__cell--content date-content">1/03/2019</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--receive">
+                                        <div class="order-table__cell--heading">Deliver State</div>
+                                        <div class="order-table__cell--content receive-content">
+                                            <span class="badge order-table__status order-table__status--cancel">Canceled</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--price">
+                                        <div class="order-table__cell--heading">Total price</div>
+                                        <div class="order-table__cell--content  price-content">$500</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--payment">
+                                        <div class="order-table__cell--heading">Payment</div>
+                                        <div class="order-table__cell--content  payment-content">Paypal</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--details">
+                                        <div class="order-table__cell--heading">Details</div>
+                                        <div class="order-table__cell--content  details-content"><a
+                                                href="order-details.html#v-pills-order-tab">View
+                                            more</a></div>
+                                    </div>
+                                </div>
+                                <div class="order-table__row">
+                                    <div class="order-table__cell order-table__cell--hash">3</div>
+                                    <div class="order-table__cell order-table__cell--id">
+                                        <div class="order-table__cell--heading">Order number</div>
+                                        <div class="order-table__cell--content id-content">
+                                            123456789
+                                        </div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--date">
+                                        <div class="order-table__cell--heading">Order Date</div>
+                                        <div class="order-table__cell--content date-content">12/02/2019</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--receive">
+                                        <div class="order-table__cell--heading">Deliver State</div>
+                                        <div class="order-table__cell--content receive-content">
+                                            <span class="badge order-table__status order-table__status--success">Delivered</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--price">
+                                        <div class="order-table__cell--heading">Total price</div>
+                                        <div class="order-table__cell--content  price-content">$1,850</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--payment">
+                                        <div class="order-table__cell--heading">Payment</div>
+                                        <div class="order-table__cell--content  payment-content">Master card</div>
+                                    </div>
+                                    <div class="order-table__cell order-table__cell--details">
+                                        <div class="order-table__cell--heading">Details</div>
+                                        <div class="order-table__cell--content  details-content"><a
+                                                href="order-details.html#v-pills-order-tab">View
+                                            more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- empty account tab -->
+                        <!--                        <div class="row">-->
+                        <!--                            <div class="col-12">-->
+                        <!--                                <div class="notice-wrapper">-->
+                        <!--                                    <p>There is no item added here. <a href="shop-sidebar-right.html" class="notice-wrapper__link">GO Shop</a></p>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!-- empty account tab -->
+                    </div>
+                    <!-- addresses tab -->
+                    <div class="tab-pane fade" id="v-pills-address" role="tabpanel"
+                         aria-labelledby="v-pills-address-tab">
+                        <div class="row profile-address">
+                            <!-- adding new address -->
+                            <div class="col-12">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn profile-address__btn" data-toggle="modal"
+                                        data-target="#addAddressModal">
+                                    <span><i class="icon-add-location"></i></span>Add a new address
+                                </button>
+                                <!-- Modal adding new address -->
+                                <div class="modal fade profile-address__modal" id="addAddressModal" tabindex="-1"
+                                     role="dialog"
+                                     aria-labelledby="addAddressModalTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="addAddressModalTitle">Adding new
+                                                    address</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="custom-form">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group custom-form__input">
+                                                                <label for="firstnameInput">First name</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="firstnameInput"
+                                                                       placeholder="" value="" required="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group custom-form__input">
+                                                                <label for="lastnameInput">Last name</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="lastnameInput"
+                                                                       placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group custom-form__input">
+                                                                <label for="stateInput">State</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="stateInput"
+                                                                       placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group custom-form__input">
+                                                                <label for="cityInput">City</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="cityInput"
+                                                                       placeholder="">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <div class="form-group custom-form__input">
+
+                                                                <label for="address">Address</label>
+                                                                <input type="text" class="form-control" id="address"
+                                                                       placeholder="" required="">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter your shipping address.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group custom-form__input">
+
+                                                                <label for="zip">Zip</label>
+                                                                <input type="text" class="form-control ltr" id="zip"
+                                                                       placeholder="" required="">
+                                                                <div class="invalid-feedback">
+                                                                    Zip code required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group custom-form__input">
+
+                                                                <label for="phone">Phone
+                                                                    <small class="text-muted">(Optional)</small>
+                                                                </label>
+                                                                <input type="text" class="form-control ltr" id="phone"
+                                                                       placeholder="">
+                                                                <div class="invalid-feedback">
+                                                                    Please enter a valid phone number.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-close" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="submit" class="btn btn-green">Add your address</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- user addresses -->
+                            <div class="col-md-6">
+                                <div class="profile-address__card">
+                                    <div class="profile-address__card--desc">
+                                        <h5>John doe</h5>
+                                        <p>1620 East Ayre Str Suite M3115662 Wilmington, DE 19804 United States</p>
+                                    </div>
+                                    <div class="profile-address__card--footer">
+                                        <button type="button" class="btn btn-blue">Edit</button>
+                                        <button type="button" class="btn btn-red">delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="profile-address__card">
+                                    <div class="profile-address__card--desc">
+                                        <h5>John doe</h5>
+                                        <p>1620 East Ayre Str Suite M3115662 Wilmington, DE 19804 United States</p>
+                                    </div>
+                                    <div class="profile-address__card--footer">
+                                        <button type="button" class="btn btn-blue">Edit</button>
+                                        <button type="button" class="btn btn-red">delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- wish list tab -->
+                    <div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel"
+                         aria-labelledby="v-pills-wishlist-tab">
+                        <div class="row wishlist-tab">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card-item card-item--light mb-30">
+                                    <div class="card-item__bg">
+                                        <a href="#">
+                                            <img src="/images/product-01.jpg" alt="">
+                                        </a>
+                                        <a href="#" class="delete-from-list"><i class="icon-bin"></i></a>
+                                        <!--                                            <span class="badge card-item__bg&#45;&#45;badge">New Arrival</span>-->
+                                    </div>
+                                    <div class="card-item__body">
+                                        <div class="card-item__body--price">
+                                            <strong>$299.00</strong>
+                                        </div>
+                                        <div class="card-item__body--title">
+                                            <a href="#"><h4>Modern fabric armchair</h4></a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-3"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (3)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item__overlay">
+                                        <ul class="action-btn">
+                                            <li><a href="#" class="icon-box"><i class="icon-search"></i></a></li>
+                                            <li class="wishlist-btn"><span class="icon-box"><i
+                                                    class="wishlist__icon icon-heart"></i></span></li>
+                                        </ul>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card-item card-item--light mb-30">
+                                    <div class="card-item__bg">
+                                        <a href="#">
+                                            <img src="/images/product-02.jpg" alt="">
+                                        </a>
+                                        <a href="#" class="delete-from-list"><i class="icon-bin"></i></a>
+                                        <span class="badge card-item__bg--badge">50% Sale</span>
+                                    </div>
+                                    <div class="card-item__body">
+                                        <div class="card-item__body--price">
+                                            <strong>$299.00</strong>
+                                        </div>
+                                        <div class="card-item__body--title">
+                                            <a href="#"><h4>Modern fabric armchair</h4></a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-3"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (3)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item__overlay">
+                                        <ul class="action-btn">
+                                            <li><a href="#" class="icon-box"><i class="icon-search"></i></a></li>
+                                            <li class="wishlist-btn"><span class="icon-box"><i
+                                                    class="wishlist__icon icon-heart"></i></span></li>
+                                        </ul>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card-item card-item--light mb-30">
+                                    <div class="card-item__bg">
+                                        <a href="#">
+                                            <img src="/images/product-08.jpg" alt="">
+                                        </a>
+                                        <a href="#" class="delete-from-list"><i class="icon-bin"></i></a>
+                                        <!--                                            <span class="badge card-item__bg&#45;&#45;badge">New Arrival</span>-->
+                                    </div>
+                                    <div class="card-item__body">
+                                        <div class="card-item__body--price">
+                                            <strong>$299.00</strong>
+                                        </div>
+                                        <div class="card-item__body--title">
+                                            <a href="#"><h4>Modern fabric armchair</h4></a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <div class="product-rate__star">
+                                                <span class="rate-3"></span>
+                                            </div>
+                                            <div class="rate-number">
+                                                (3)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item__overlay">
+                                        <ul class="action-btn">
+                                            <li><a href="#" class="icon-box"><i class="icon-search"></i></a></li>
+                                            <li class="wishlist-btn"><span class="icon-box"><i
+                                                    class="wishlist__icon icon-heart"></i></span></li>
+                                        </ul>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- empty account tab -->
+                        <!--                        <div class="row">-->
+                        <!--                            <div class="col-12">-->
+                        <!--                                <div class="notice-wrapper">-->
+                        <!--                                    <p>There is no item added here.</p>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!-- empty account tab -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main content -->

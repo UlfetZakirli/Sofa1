@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Error 404";
+}
+<!-- breadcrumb -->
+<div class="container header-mt">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb custom-breadcrumb">
+                    <li class="breadcrumb-item"><a asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Error</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">404 Page not found</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb -->
+<!-- main content -->
+<div class="main-content pb-80">
+    <div class="error-sec">
+        <div class="container">
+            <div class="error-sec__img">
+                <img src="/images/404-thumb.jpg" alt="">
+            </div>
+            <div class="error-sec__content">
+                <h1>Error 404 Not Found</h1>
+                <h3 class="text">We´re sorry but the page you are looking for does not exist.</h3>
+                <a asp-action="Index" class="btn back-btn"><i class="fa fa-home"></i> Back To Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main content -->
