@@ -35,8 +35,7 @@ namespace DataAccess
                 {
                     Id = "1023",
                     Email = "ulfet@gmail.com",
-                    FirstName = "Ulfet",
-                    LastName = "Zakirli",
+                    Name = "Ulfet",
                     Address = "Azərbaycan",
                     PhoneNumber = "+994-55-5454452",
                     UserName = "ulfet@gmail.com",

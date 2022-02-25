@@ -16,7 +16,8 @@ builder.Services.AddScoped<ProductManager>();
 builder.Services.AddScoped<CategoryManager>();
 builder.Services.AddScoped<OrderManager>();
 
-builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ShoppingDB>();
 builder.Services.AddControllersWithViews();
 

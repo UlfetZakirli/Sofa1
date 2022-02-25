@@ -13,7 +13,7 @@
                 <p class="hero-header-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur
                     deleniti fugiat itaque
                     laudantium nemo nesciunt, non nostrum optio sequi, similique sit sunt suscipit vero!</p>
-                <a href="shop-sidebar-right.html" class="btn  hero-header-btn">Show more</a>
+                <a asp-action="Shop_right" class="btn  hero-header-btn">Show more</a>
             </div>
             <div class="col-md-7 hero-header__img">
                 <img src="/images/header/header-06.png" alt="">
@@ -34,11 +34,13 @@
                 </div>
             </div>
             <div class="owl-carousel card-item-slider ltr" id="itemSliderBlue">
-                <div class="item">
+                @foreach (var item in Model.Products)
+                {
+                     <div class="item">
                     <div class="card-item card-item--blue">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="images/product-14.jpg" class="card-item__img" alt="">
+                                <img src="@item.PhotoUrl" class="card-item__img" alt="">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-item__body">
@@ -60,79 +62,16 @@
                                         </div>
                                     </div>
                                     <div class="card-item__body--btn">
-                                        <a href="javascript:void(0)" @*pro-id="@productNew.ID"*@  class="btn btn-shop">Shop now</a>
+                                        <a asp-action="Single_product" asp-route-id="@item.ID" class="btn btn-shop">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="card-item card-item--blue">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="images/product-15.jpg" class="card-item__img" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-item__body">
-                                    <div class="card-item__body--title">
-                                        <a href="#"><h3>Gray Dining chair</h3></a>
-                                    </div>
-                                    <div class="card-item__body--price">
-                                        <strong>$150,00</strong>
-                                        <span class="old">$250.00</span>
-                                    </div>
-                                    <div class="card-item__body--rate">
-                                        <div class="product-rate">
-                                            <div class="product-rate__star">
-                                                <span class="rate-3"></span>
-                                            </div>
-                                            <div class="rate-number">
-                                                (3)
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-item__body--btn">
-                                        <a href="#" class="btn btn-shop">Shop now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card-item card-item--blue">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="images/product-16.jpg" class="card-item__img" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-item__body">
-                                    <div class="card-item__body--title">
-                                        <a href="#"><h3>Gray Dining chair</h3></a>
-                                    </div>
-                                    <div class="card-item__body--price">
-                                        <strong>$150,00</strong>
-                                        <span class="old">$250.00</span>
-                                    </div>
-                                    <div class="card-item__body--rate">
-                                        <div class="product-rate">
-                                            <div class="product-rate__star">
-                                                <span class="rate-3"></span>
-                                            </div>
-                                            <div class="rate-number">
-                                                (3)
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-item__body--btn">
-                                        <a href="#" class="btn btn-shop">Shop now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
+               
+              
             </div>
         </div>
         <!-- end items slider light blue -->
@@ -331,7 +270,7 @@
                                     <h4 class="title">Creative Design</h4>
                                     <span class="sub-title">up to 70% Sale</span>
                                 </a>
-                                <a href="#" class="btn banner-btn">Shop now</a>
+                                <a asp-action="Single_product" class="btn banner-btn">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -347,7 +286,7 @@
                                     <h4 class="title">Creative home decor</h4>
                                     <span class="sub-title">2020 collection</span>
                                 </a>
-                                <a href="#" class="btn banner-btn">Shop now</a>
+                                <a asp-action="Single_product" class="btn banner-btn">Shop now</a>
                             </div>
                         </div>
                     </div>

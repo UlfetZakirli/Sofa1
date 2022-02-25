@@ -10,7 +10,7 @@ namespace Services
 {
     public class CategoryManager
     {
-        private readonly ShoppingDB _context;
+         private readonly ShoppingDB _context;
 
         public CategoryManager(ShoppingDB context)
         {

@@ -8,9 +8,10 @@ namespace Entities
 {
     public class OrderItem:BaseEntity
     {
-        public int ProductID { get; set; }
+        public decimal itemPrice { get; set; }
+        public int ProductId { get; set; }
         public virtual Product Product { get; set; }
-        public int Quantity { get; set; }
+        public ushort Quantiy { get; set; }
         public decimal Price { get; set; }
         public int OrderID { get; set; }
         public virtual Order Order { get; set; }

@@ -5,6 +5,7 @@
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -22,12 +23,88 @@ function getCookie(cname) {
 }
 
 const cookieVal = getCookie("cartItem");
-
-
 let productIds = cookieVal !== "" ? cookieVal.split("-") : [];
-console.log(productIds)
-$(".btn-shop").click(function () {
+
+
+$(".add-to-cart-btn").click(function (e) {
+    e.preventDefault();
+    Swal.fire(
+        'Good job!',
+        'Product Added!',
+        'success'
+    )
     const productId = $(this).attr("pro-id");
-        productIds.push(productIds);
-        setCookie("cartItem",productIds.join("-"),3)
+    productIds.push(productId);
+    setCookie("cartItem", productIds.join("-"), 3)
 })
+
+$(".quantity__plus").on("click", function () {
+    let totalPrice = 0;
+    debugger;
+    const inputVal = Number($(this).parent().find("input").val())
+    if (inputVal !== 1) {
+        $(".minus-btn").css({ "pointer-events": "auto" })
+    }
+    const productId =Number($(this).parents(".quantity").attr("pro-id"));
+    productIds = productIds.filter(c => c !== productId)
+    for (let i = 0; i < inputVal; i++) {
+        productIds.push(productId)
+    }
+    const price = parseFloat($(this).parents(".quantity").attr("pro-price"))
+    $(this).parents(".item-cart").find(".total-price strong").text("$" + price * inputVal)
+
+    setCookie("cartItem", productIds.join("-"), 1)
+    let subTotal = $(".cart-table .subtotal-amount").text().split("$")
+    for (let i = 0; i < subTotal.length; i++) {
+        totalPrice += Number(subTotal[i])
+    }
+    $(".cart-totals ul li span b").html(`$${totalPrice}`)
+})
+
+
+
+$(".minus-btn").on("click", function () {
+    let totalPrice = 0;
+
+    const inputVal = Number($(this).parent().find("input").val()) - 1
+
+    if (inputVal === 1) {
+        $(this).css({ "pointer-events": "none" })
+    }
+
+    const productId = $(this).parent().attr("pro-id");
+    productIds = productIds.filter(c => c !== productId)
+    for (let i = 0; i < inputVal; i++) {
+        productIds.push(productId)
+    }
+    const price = Number($(this).parent().attr("pro-price"))
+    $(this).parents("tr").find(".subtotal-amount").text("$" + price * inputVal)
+    setCookie("cartItem", productIds.join("-"), 1)
+    let subTotal = $(".cart-table .subtotal-amount").text().split("$")
+    for (let i = 1; i < subTotal.length; i++) {
+        totalPrice += Number(subTotal[i])
+    }
+    $(".cart-totals ul li span b").html(`$${totalPrice}`)
+})
+
+$(".item-cart .remove").on("click", function (e) {
+    e.preventDefault()
+    let totalPrice = 0;
+    const productId = $(this).attr("pro-id");
+    productIds = productIds.filter(p => p !== productId)
+    setCookie("cartItem", productIds.join("-"), 1)
+
+    let subTotal = $(".cart-table .item-cart").text().split("$")
+    for (let i = 1; i < subTotal.length; i++) {
+        totalPrice += Number(subTotal[i])
+    }
+    $(".cart-totals ul li span b").html(`$${totalPrice}`)
+    if ($(".cart-area table tbody tr").length == 0) {
+
+        $(".cart-area .my-cart-area").html('<p class="alert alert-danger">Kartda Məhsul tapılmadı</p>')
+    }
+    $(this).parents(".item-cart").remove()
+
+})
+
+

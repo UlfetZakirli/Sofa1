@@ -23,13 +23,13 @@ namespace Services
             var productList = _context.Products.Include(x => x.Category).AsQueryable();
 
             if (categoryId != null)
-                productList = productList.Where(x => x.CategoryID == categoryId);
+                productList = productList.Where(x => x.CategoryID == categoryId );
 
 
             if (!string.IsNullOrWhiteSpace(q))
                 productList = productList.Where(x => x.Name.Contains(q) || x.Category.Name.Contains(q));
 
-            return productList.OrderByDescending(x => x.ModifiedOn).ToList();
+            return productList.Where(x=> !x.IsDeleted).OrderByDescending(x => x.ModifiedOn).ToList();
         }
 
         public List<Product> GetProducts()
@@ -59,7 +59,7 @@ namespace Services
 
         public List<Product?> GetByIds(IEnumerable<int> ids)
         {
-            var selectedProducts = _context.Products.Where(pr => ids.Contains(pr.ID)).ToList();
+            var selectedProducts = _context.Products.Where(pr => ids.Contains(pr.ID) && !pr.IsDeleted).ToList();
             return selectedProducts;
 
         }

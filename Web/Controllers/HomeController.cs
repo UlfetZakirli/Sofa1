@@ -1,6 +1,7 @@
 ﻿using DataAccess;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 using System.Diagnostics;
 using Web.Models;
 using Web.ViewModels;
@@ -11,11 +12,13 @@ namespace Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ShoppingDB _context;
+        private readonly ProductManager _productManager;
 
-        public HomeController(ILogger<HomeController> logger, ShoppingDB context)
+        public HomeController(ILogger<HomeController> logger, ShoppingDB context, ProductManager productManager)
         {
             _logger = logger;
             _context = context;
+            _productManager = productManager;
         }
 
         public IActionResult Index()
@@ -23,7 +26,7 @@ namespace Web.Controllers
             HomeVM vm = new HomeVM()
             {
                 Sliders = _context.Sliders.ToList(),
-                Products = _context.Products.ToList(),
+                Products = _context.Products.Where(x=>!x.IsDeleted).ToList(),
             };
             return View(vm);
         }
@@ -72,9 +75,13 @@ namespace Web.Controllers
         {
             return View();
         }
-        public IActionResult Single_product()
+        public IActionResult Single_product(int? id)
         {
-            return View();
+            ProductSingleVM vm = new ProductSingleVM()
+            {
+                Product = _productManager.GetById(id.Value)
+            };
+            return View(vm);
         }
 
         public IActionResult Shopping_Cart()

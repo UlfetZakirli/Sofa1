@@ -29604,3 +29604,22 @@ div.tagsinput span.tag a {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+/*# sourceMappingURL=maps/style.css.map */
+.catIcon i {
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    font-size: 15px;
+    border: 1.5px solid #999;
+    cursor: pointer;
+    transition: .2s ease-in-out
+}
+
+    .catIcon i:hover {
+        background: #222;
+        color: white;
+    }
+
+.active-icon {
+    background: green;
+    color: white;
+}   

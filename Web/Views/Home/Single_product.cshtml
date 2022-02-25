@@ -1,4 +1,4 @@
-﻿
+﻿@model ProductSingleVM
 @{
     ViewData["Title"] = "Single product";
 }<!-- breadcrumb -->
@@ -24,7 +24,7 @@
             <div class="col-lg-7">
                 <div class="gallery-on-top">
                     <a href="/images/single-product-01.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-                        <img src="/images/single-product-01.jpg" alt="">
+                        <img src="@Model.Product.PhotoUrl" alt="">
                     </a>
                 </div>
                 <!-- product thumbnails -->
@@ -157,7 +157,7 @@
                         <input class="quantity__input" type="text" value="1"/>
                         <span class="quantity__plus"><i class="fas fa-plus"></i></span>
                     </div>
-                    <a href="#" class="btn add-to-cart-btn"><i class="fas fa-shopping-cart pr-1"></i> Add to cart</a>
+                    <a asp-controller="Cart" asp-action="Index" class="btn add-to-cart-btn" pro-id="@Model.Product.ID"><i class="fas fa-shopping-cart pr-1"></i> Add to cart</a>
                 </div>
             </div>
         </div>
